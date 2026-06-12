@@ -1,0 +1,76 @@
+.intentions-menu {
+	position: fixed;
+	z-index: var(--layer-menu, 25);
+	min-width: 260px;
+	max-width: 380px;
+	max-height: 320px;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--background-primary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-m, 8px);
+	box-shadow: var(--shadow-s);
+	padding: 4px;
+	overflow: hidden;
+}
+
+.intentions-menu-query {
+	padding: 4px 8px;
+	font-size: var(--font-ui-small);
+	color: var(--text-muted);
+	border-bottom: 1px solid var(--background-modifier-border);
+	margin-bottom: 4px;
+}
+
+.intentions-menu-query.is-hidden {
+	display: none;
+}
+
+.intentions-menu-list {
+	overflow-y: auto;
+}
+
+.intentions-menu-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 5px 8px;
+	border-radius: var(--radius-s, 4px);
+	cursor: pointer;
+	font-size: var(--font-ui-small);
+	color: var(--text-normal);
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.intentions-menu-item.is-selected {
+	background-color: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.intentions-menu-icon {
+	display: flex;
+	align-items: center;
+	color: var(--text-muted);
+	flex-shrink: 0;
+}
+
+.intentions-menu-icon svg {
+	width: 14px;
+	height: 14px;
+}
+
+.intentions-menu-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.intentions-menu-empty {
+	padding: 8px;
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+}
+
+.intentions-extract-name {
+	min-width: 240px;
+}
