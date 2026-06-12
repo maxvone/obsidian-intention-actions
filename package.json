@@ -1,0 +1,23 @@
+{
+	"name": "obsidian-intention-actions",
+	"version": "0.1.0",
+	"description": "JetBrains-style Alt+Enter intention actions for Obsidian markdown files",
+	"main": "main.js",
+	"scripts": {
+		"dev": "node esbuild.config.mjs",
+		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+		"test": "vitest run"
+	},
+	"keywords": ["obsidian", "plugin", "intention-actions"],
+	"author": "maximvone",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^20.11.0",
+		"builtin-modules": "^3.3.0",
+		"esbuild": "^0.21.0",
+		"obsidian": "latest",
+		"tslib": "^2.6.0",
+		"typescript": "^5.4.0",
+		"vitest": "^1.6.0"
+	}
+}
