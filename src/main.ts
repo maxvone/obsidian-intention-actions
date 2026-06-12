@@ -1,5 +1,6 @@
 import { Notice, Plugin } from "obsidian";
 import { buildContext } from "./context-analyzer";
+import { lightbulbExtension } from "./lightbulb";
 import { ActionMenu, cursorCoords } from "./menu";
 import { ActionRegistry } from "./registry";
 import {
@@ -34,6 +35,10 @@ export default class IntentionActionsPlugin extends Plugin {
 		);
 
 		this.addSettingTab(new IntentionsSettingTab(this.app, this));
+
+		// CM6 extension — gated by settings at runtime inside LightbulbView.check().
+		// A single registerEditorExtension call covers all open editors.
+		this.registerEditorExtension(lightbulbExtension(this));
 
 		this.addCommand({
 			id: "open-intention-menu",

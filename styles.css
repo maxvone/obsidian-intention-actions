@@ -1,3 +1,39 @@
+/* ── Lightbulb indicator ─────────────────────────────────────────────── */
+
+.intentions-lightbulb {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	opacity: 0;
+	pointer-events: none;
+	cursor: pointer;
+	border-radius: var(--radius-s, 4px);
+	color: var(--text-muted);
+	transition: opacity 120ms ease, color 120ms ease, background-color 120ms ease;
+	z-index: 10;
+}
+
+.intentions-lightbulb.is-visible {
+	opacity: 0.55;
+	pointer-events: auto;
+}
+
+.intentions-lightbulb:hover {
+	opacity: 1;
+	color: var(--color-yellow);
+	background-color: var(--background-modifier-hover);
+}
+
+.intentions-lightbulb svg {
+	width: 14px;
+	height: 14px;
+}
+
+/* ── Intention actions menu ──────────────────────────────────────────── */
+
 .intentions-menu {
 	position: fixed;
 	z-index: var(--layer-menu, 25);

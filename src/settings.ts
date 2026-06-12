@@ -16,6 +16,7 @@ export interface IntentionsSettings {
 	extractAsEmbed: boolean;
 	extractCopyFrontmatter: boolean;
 	fuzzyFilter: boolean;
+	showLightbulb: boolean;
 	dateFormat: string;
 	timeFormat: string;
 	snippets: SnippetDef[];
@@ -36,6 +37,7 @@ export const DEFAULT_SETTINGS: IntentionsSettings = {
 	extractAsEmbed: false,
 	extractCopyFrontmatter: false,
 	fuzzyFilter: true,
+	showLightbulb: true,
 	dateFormat: "YYYY-MM-DD",
 	timeFormat: "HH:mm",
 	snippets: [],
@@ -82,6 +84,16 @@ export class IntentionsSettingTab extends PluginSettingTab {
 			.addToggle((t) =>
 				t.setValue(s.fuzzyFilter).onChange(async (v) => {
 					s.fuzzyFilter = v;
+					await this.plugin.saveSettings();
+				})
+			);
+
+		new Setting(containerEl)
+			.setName("Show lightbulb indicator")
+			.setDesc("Show a lightbulb to the left of the cursor line when actions are available.")
+			.addToggle((t) =>
+				t.setValue(s.showLightbulb).onChange(async (v) => {
+					s.showLightbulb = v;
 					await this.plugin.saveSettings();
 				})
 			);
