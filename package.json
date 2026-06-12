@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-intention-actions",
-	"version": "0.1.0",
+	"version": "0.0.1",
 	"description": "JetBrains-style Alt+Enter intention actions for Obsidian markdown files",
 	"main": "main.js",
 	"scripts": {

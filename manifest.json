@@ -1,7 +1,7 @@
 {
 	"id": "intention-actions",
 	"name": "Intention Actions",
-	"version": "0.1.0",
+	"version": "0.0.1",
 	"minAppVersion": "1.4.0",
 	"description": "JetBrains-style Alt+Enter intention actions menu for markdown: context-aware quick fixes for selections, headings, lists, links, code blocks and frontmatter.",
 	"author": "maximvone",
